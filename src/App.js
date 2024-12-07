@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter,Route,Routes } from 'react-router-dom';
+import { Route,Routes } from 'react-router-dom';
 import Main from './Components/Main';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Main></Main>
-     <BrowserRouter>
+
       <Routes>
         <Route path='/signup' element={<Signup/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
@@ -25,8 +25,7 @@ function App() {
         <Route path='/application' element={<TrackApplication/>}/>
         
       </Routes>
-  </BrowserRouter>
-     
+
       
       
     </div>
