@@ -1,0 +1,146 @@
+/* Base styles for the donor page */
+#donorpage {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+   
+}
+
+/* Hide scrollbar in WebKit browsers */
+
+
+/* For Firefox and IE/Edge */
+#donorpage {
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hides scrollbar in older IE/Edge */
+}
+
+/* Form styles */
+#donorpage form {
+    width: 33%;
+    position: fixed;
+    left: 35%;
+    height: 85%;
+    backdrop-filter: blur(3px);
+    top: 10%;
+    padding: 2% 6%;
+    box-shadow: 0px 0px 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.3); /* Add a semi-transparent background for better readability */
+}
+
+/* Button styles inside the form */
+#donorpage form button {
+    width: 80%;
+}
+
+/* Image container styles */
+#donorimage {
+    height: 100%;
+    width: 100%;
+}
+
+#donorimage img {
+    filter: brightness(70%);/* Maintain aspect ratio */
+}
+
+.donor-message {
+    position: fixed;
+    left: 75%;
+    top: 6%;
+    background-color: green;
+    padding-top: 0.4%;
+    font-weight: bold;
+    text-transform: capitalize;
+    width: 22%;
+    height: 6%;
+    border-radius: 5px;
+    color: white;
+    animation: messageAnimate ease-in-out 1s;
+}
+@keyframes messageAnimate {
+    from {
+        top: 0%;
+        display: none;
+    }
+    to {
+        top: 2%;
+        display: block;
+    }
+}
+
+/* Responsive adjustments */
+
+/* Screens smaller than 1080px */
+@media (max-width: 1080px) {
+    #donorpage form {
+        width: 40%;
+        left: 30%;
+    }
+}
+
+/* Screens smaller than 720px */
+@media (max-width: 720px) {
+    #donorpage form {
+        width: 50%;
+        left: 25%;
+        height: 90%;
+    }
+}
+
+/* Screens smaller than 480px */
+@media (max-width: 480px) {
+    #donorpage form {
+        width: 70%;
+        left: 15%;
+        padding: 5%;
+    }
+
+    #donorpage form button {
+        width: 100%; /* Make button fill the form width */
+    }
+}
+
+/* Screens smaller than 360px */
+@media (max-width: 360px) {
+    #donorpage form {
+        width: 80%;
+        left: 10%;
+        height: auto; /* Allow height to adjust based on content */
+        padding: 8%;
+    }
+}
+@media (max-width: 768px) {
+    .donor-message {
+        left: 46%;  /* Center message horizontally */
+      
+        width: 50%;  /* Reduce width */
+        /* Adjust height */
+        padding-top: 1%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .donor-message {
+        left: 20%;  /* Center message horizontally */
+     
+        width: 70%;  /* Reduce width further */
+       /* Adjust height */
+        padding-top: 1%;
+        text-align: center;
+        
+    }
+}
+@media (max-width: 1024px) {
+    .donor-message {
+        left: 50%;  /* Center message horizontally */
+        transform: translate(-50%,-50%);  /* Adjust for perfect centering */
+        width: 45%;  /* Adjust width */
+        padding-top: 1%;
+        text-align: center;
+    }
+}

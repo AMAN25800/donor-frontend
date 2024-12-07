@@ -1,0 +1,93 @@
+#application {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6%;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  background-color: #f9f9f9;
+}
+
+#application .card {
+  width: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding-left: 10%;
+  padding-top: 1%;
+  background-color: white;
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.info {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info p {
+  margin: 0;
+ 
+}
+
+.btn-success {
+  margin-top: 20px;
+  margin-left: -65%;
+  align-self: flex-start;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 768px (tablets and smaller devices) */
+@media (max-width: 768px) {
+  #application .card {
+    width: 80%; /* Make cards take more space on smaller screens */
+    padding-left: 5%;
+  }
+
+  .info p {
+    font-size: 14px; /* Make text smaller on smaller screens */
+  }
+
+  .btn-success {
+    margin-left: -50%; /* Adjust button placement */
+  }
+}
+
+/* For screens smaller than 480px (mobile devices) */
+@media (max-width: 480px) {
+  #application .card {
+    width: 90%; /* Further reduce card width for very small screens */
+    padding-left: 0; /* Remove padding on mobile */
+  }
+
+  .info p {
+    font-size: 12px; /* Smaller text for very small screens */
+  }
+
+  .btn-success {
+    margin-left: -35%; /* Adjust button placement on very small screens */
+  }
+}
+
+/* For larger screens, like desktops */
+@media (min-width: 1024px) {
+  #application .card {
+    width: 40%; /* Increase card width for large screens */
+  }
+
+
+
+  .btn-success {
+    margin-left: -70%; /* Adjust button placement for large screens */
+  }
+}

@@ -1,0 +1,202 @@
+#signup {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.signup-message {
+    position: fixed;
+    left: 75%;
+    top: 6%;
+    background-color: green;
+    padding-top: 0.4%;
+    font-weight: bold;
+    text-transform: capitalize;
+    width: 22%;
+    height: 6%;
+    border-radius: 5px;
+    color: white;
+    animation: messageAnimate ease-in-out 1s;
+}
+
+@keyframes messageAnimate {
+    from {
+        top: 0%;
+        display: none;
+    }
+    to {
+        top: 6%;
+        display: block;
+    }
+}
+
+.signup-form {
+    position: absolute;
+    overflow-y: scroll;
+    border-radius: 15px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+    width: 420px;  /* Default width */
+    height: 100%;  /* Default height */
+    background-color: #ffffff;
+    padding: 40px 40px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.signup-form:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6e7dff, #9b55e5);
+    opacity: 0.15;
+    z-index: -1;
+}
+
+.signup-form h2 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.signup-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.signup-form form input,
+.signup-form form button {
+    padding: 8px 15px;  /* Reduced padding to decrease height */
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.signup-form form input:focus,
+.signup-form form button:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(57, 87, 255, 0.7);
+}
+
+.signup-form form input {
+    width: 100%;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.signup-form form button {
+    background-color: #6e7dff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-form form button:hover {
+    background-color: #5b6cfa;
+}
+
+.signup-form form input::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+.signup-form form a {
+    font-size: 14px;
+    color: #6e7dff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.signup-form form a:hover {
+    color: #3a4dff;
+}
+
+/* Responsive styles for .signup-message */
+@media (max-width: 768px) {
+    .signup-message {
+        left: 46%;  /* Center message horizontally */
+      
+        width: 50%;  /* Reduce width */
+        /* Adjust height */
+        padding-top: 1%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-message {
+        left: 20%;  /* Center message horizontally */
+       
+        width: 70%;  /* Reduce width further */
+       /* Adjust height */
+        padding-top: 1%;
+        text-align: center;
+    }
+}
+
+/* Responsive styles for .signup-form (if needed) */
+
+@media (max-width: 768px) {
+    .signup-form {
+        width: 90%;
+        height: auto;  /* Adjust height for smaller screens */
+        padding: 20px;
+    }
+
+    .signup-form h2 {
+        font-size: 24px;
+    }
+
+    .signup-form form input,
+    .signup-form form button {
+        font-size: 14px;
+    }
+
+    .signup-form form input {
+        padding: 8px 15px;  /* Reduced padding to decrease height */
+    }
+
+    .signup-form form button {
+        padding: 10px 15px;  /* Slightly reduced padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .signup-form h2 {
+        font-size: 20px;
+    }
+
+    .signup-form form input,
+    .signup-form form button {
+        font-size: 14px;
+        padding: 8px 12px;  /* Further reduced padding */
+    }
+}
+
+@media (max-width: 1024px) {
+    .signup-message {
+        left: 50%;  /* Center message horizontally */
+        transform: translate(-50%,-50%);  /* Adjust for perfect centering */
+        width: 45%;  /* Adjust width */
+        padding-top: 1%;
+        text-align: center;
+    }
+}

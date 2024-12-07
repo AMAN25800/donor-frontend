@@ -1,0 +1,190 @@
+#dashboard {
+    position: fixed;
+    overflow-y: scroll; /* Ensure content can still scroll */
+    background-color: white;
+    height: 100%;
+    width: 100%;
+}
+
+/* Hide scrollbar in WebKit browsers */
+#dashboard::-webkit-scrollbar {
+    display: none; /* Completely hides the scrollbar */
+}
+
+/* For non-WebKit browsers, ensure compatibility */
+#dashboard {
+    scrollbar-width: none; /* Firefox-specific, hides the scrollbar */
+    -ms-overflow-style: none; /* Hides scrollbar in older IE/Edge */
+}
+
+/* Other existing styles */
+.dash-nav {
+    position: fixed;
+    top:0;
+    box-shadow: 0px 0px 10px;
+    height: 65px;
+    width: 100%;
+    background-color: white;
+}
+
+#cards {
+    margin-left: 18%;
+    margin-top: 5%;
+    display: flex;
+    gap: 5%;
+    text-align: justify; /* Aligning text justify ensures that text to be correctly aligned (especially for paragraphs) */
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px;
+}
+
+.dashboard-content {
+    position: fixed; /* Changed to fixed to cover the viewport */
+    top: 0;
+    left: 0;
+    background-color: #E6E6FA; /* Light lavender color */
+    height: 100%; /* Full height of the viewport */
+    width: 100%; /* Full width of the viewport */
+    z-index: -1;
+    padding-top: 5%;
+    overflow-y: scroll; /* Ensure it is below other elements */
+}
+.dashboard-content::-webkit-scrollbar{
+    display: none;
+}
+
+#outline {
+    stroke-dasharray: 2.427766571px, 242.7766571045px;
+    stroke-dashoffset: 0;
+    -webkit-animation: anim 1.3s linear infinite;
+    animation: anim 1.3s linear infinite;
+}
+
+svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12vw; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    filter: brightness(100%);
+}
+
+@-webkit-keyframes anim {
+    12.5% {
+        stroke-dasharray: 33.9887319946px, 242.7766571045px;
+        stroke-dashoffset: -26.7054322815px;
+    }
+    43.75% {
+        stroke-dasharray: 84.9718299866px, 242.7766571045px;
+        stroke-dashoffset: -84.9718299866px;
+        stroke: white;
+    }
+    to {
+        stroke-dasharray: 2.427766571px, 242.7766571045px;
+        stroke-dashoffset: -240.3488905334px;
+    }
+}
+
+@keyframes anim {
+    12.5% {
+        stroke-dasharray: 33.9887319946px, 242.7766571045px;
+        stroke-dashoffset: -26.7054322815px;
+    }
+    43.75% {
+        stroke-dasharray: 84.9718299866px, 242.7766571045px;
+        stroke-dashoffset: -84.9718299866px;
+        stroke: white;
+    }
+    to {
+        stroke-dasharray: 2.427766571px, 242.7766571045px;
+        stroke-dashoffset: -240.3488905334px;
+    }
+}
+
+/* Responsive scaling */
+@media (max-width: 1024px) {
+    svg {
+        width: 18vw;
+    }
+}
+
+@media (max-width: 720px) {
+    svg {
+        width: 22vw;
+    }
+}
+
+@media (max-width: 480px) {
+    svg {
+        width: 30vw;
+    }
+}
+
+@media (max-width: 360px) {
+    svg {
+        width: 35vw;
+    }
+}
+
+/* Screens smaller than 1080px */
+@media (max-width: 1080px) {
+    #cards {
+        margin-left: 10%; /* Adjust horizontal margin for medium screens */
+        gap: 3%; /* Adjust gap between cards */
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    }
+
+    .card {
+        width: 45%;
+        margin: 1%; /* Adjust card width for medium screens */
+    }
+}
+
+/* Screens smaller than 720px */
+@media (max-width: 720px) {
+    .dashboard-content{
+        padding-top: 15%;
+    }
+    #cards {
+      
+        margin-left: 20%; /* Further reduce horizontal margin */
+        gap: 2%; /* Reduce gap for smaller screens */
+    }
+
+    .card {
+      
+        width: 90%;
+        margin: 1%; /* Make cards occupy more width */
+    }
+}
+
+/* Screens smaller than 480px */
+@media (max-width: 480px) {
+    .dashboard-content{
+        padding-top: 20%;
+    }
+    #cards {
+        margin-left: 0; /* Center align by removing margin */
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Align cards in the center */
+        gap: 15px; /* Add sufficient space between stacked cards */
+    }
+
+    .card {
+        width: 95%; /* Allow cards to take almost full width */
+    }
+}
+
+/* Screens smaller than 360px */
+@media (max-width: 360px) {
+    #cards {
+        gap: 10px; /* Further reduce gap for very small screens */
+    }
+
+    .card {
+        width: 100%; /* Cards take full width on very small screens */
+    }
+}

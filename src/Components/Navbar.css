@@ -1,0 +1,48 @@
+/* Default Styles (Already Written) */
+#login {
+    position: fixed;
+    left: 70%;
+    top: 2%;
+    color: red;
+    font-weight: bold;
+    background-color: white;
+    border: 1.6px solid green;
+}
+
+#signup:hover {
+    background-color: white;
+}
+
+#nav {
+    background-color: #B4FFE5;
+    height: 70px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    #login {
+        left: 70%; /* Adjust the position for medium screens */
+        top: 2%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #login {
+        left:70%; /* Center for smaller tablets */
+        top: 2%;
+        font-size: 14px; /* Reduce font size */
+    }
+
+   
+}
+
+@media screen and (max-width: 480px) {
+    #login {
+        left: 60%; /* Further adjust for small phones */
+        top: 3%;
+        font-size: 14px; /* Smaller font for better fit */
+        padding: 5px; /* Add padding for better readability */
+    }
+
+   
+}

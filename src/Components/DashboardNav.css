@@ -1,0 +1,95 @@
+/* Base styles for large screens (default) */
+#dashlogin {
+    position: absolute;
+    left: 73%;
+    top: 1.7%;
+    border: none;
+    background-color: white;
+}
+
+#hospitalname {
+    position: absolute;
+    top: 80%;
+    left: 72.5%;
+    font-weight: 500;
+    font-size: 1rem; /* Adjust font size based on scaling */
+    text-align: center;
+}
+
+#logout {
+    position: absolute;
+    left: 80%;
+    top: 15%;
+    border: none;
+    font-weight: 500;
+    background-color: transparent;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1440px) { /* For smaller screens like 14-inch laptops */
+    #dashlogin {
+        left: 70%;
+    }
+    #hospitalname {
+        left: 70%;
+        font-size: 0.9rem; /* Slightly smaller font */
+    }
+    #logout {
+        left: 77%;
+    }
+}
+
+@media (max-width: 1280px) { /* For medium-sized screens like 13-inch laptops */
+    #dashlogin {
+        left: 68%;
+    }
+    #hospitalname {
+        left: 68%;
+        font-size: 0.9rem; /* Further reduce font size */
+    }
+    #logout {
+        left: 75%;
+    }
+}
+
+@media (max-width: 1024px) { /* For tablets */
+    #dashlogin {
+        left: 65%;
+    }
+    #hospitalname {
+        left: 65%;
+        font-size: 0.9rem;
+    }
+    #logout {
+        left: 76%;
+    }
+}
+
+@media (max-width: 768px) { /* For smaller tablets and large phones */
+    #dashlogin {
+        left: 60%;
+    }
+    #hospitalname {
+        left: 60%;
+        font-size: 0.9rem;
+    }
+    #logout {
+        left: 75%;
+    }
+}
+
+@media (max-width: 480px) { /* For mobile phones */
+    #dashlogin {
+        left: 65%;
+        transform: translateX(-50%); /* Center-align for small screens */
+    }
+    #hospitalname {
+        left: 65%;
+        font-size: 0.9rem;
+        transform: translateX(-50%);
+    }
+    #logout {
+        left: 90%;
+        transform: translateX(-50%);
+    }
+}

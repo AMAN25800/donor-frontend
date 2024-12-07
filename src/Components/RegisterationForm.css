@@ -1,0 +1,131 @@
+#userregister {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+#user {
+    height: 100%;
+}
+
+#user img {
+    height: 100%;
+    width: 100%;
+    filter: brightness(55%);
+}
+
+#user form {
+    overflow-y: scroll;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1%;
+    height: 97%;
+    width: 30%;
+    position: fixed;
+    left: 37%;
+    top: 3%;
+    box-shadow: 0px 0px 30px;
+    color: white;
+    font-weight: bold;
+    backdrop-filter: blur(3px);
+}
+
+#user form button {
+    margin-top: -2%;
+    width: 70%;
+}
+.register-message {
+    position: fixed;
+    left: 75%;
+    top: 6%;
+
+    background-color: green;
+    padding-top: 0.4%;
+    font-weight: bold;
+    text-transform: capitalize;
+    width: 22%;
+    height: 6%;
+    border-radius: 5px;
+    color: white;
+    animation: messageAnimate ease-in-out 1s;
+}
+@keyframes messageAnimate {
+    from {
+        top: 0%;
+        display: none;
+    }
+    to {
+        top: 2%;
+        display: block;
+    }
+}
+/* Responsive Design */
+@media (max-width: 1080px) {
+    #user form {
+        width: 50%;
+        left: 32.5%; /* Centered for 1080px */
+        top: 5%;
+        height: 90%;
+    }
+}
+
+@media (max-width: 720px) {
+    #user form {
+        width: 65%;
+        left: 26%; /* Adjust left to keep form centered */
+        top: 7%;
+        height: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    #user form {
+        width: 80%;
+        left: 15%; /* Keep form centered on small screens */
+        top: 10%;
+        height: 80%;
+    }
+}
+
+@media (max-width: 360px) {
+    #user form {
+        width: 90%;
+        left: 5%; /* Full width with padding */
+        top: 12%;
+        height: 75%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .register-message {
+        left: 46%;  /* Center message horizontally */
+      
+        width: 50%;  /* Reduce width */
+        /* Adjust height */
+        padding-top: 1%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .register-message {
+        left: 20%;  /* Center message horizontally */
+     
+        width: 70%;  /* Reduce width further */
+       /* Adjust height */
+        padding-top: 1%;
+        text-align: center;
+        
+    }
+}
+@media (max-width: 1024px) {
+    .feedback-message {
+        left: 50%;  /* Center message horizontally */
+        transform: translate(-50%,-50%);  /* Adjust for perfect centering */
+        width: 45%;  /* Adjust width */
+        padding-top: 1%;
+        text-align: center;
+    }
+}

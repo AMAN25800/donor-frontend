@@ -1,0 +1,84 @@
+#slide1 {
+    filter: brightness(55%);
+    height: 680px; /* Default height for large screens */
+    width: 100%; /* Ensure full width */
+    object-fit: cover; /* Ensures proper scaling for images */
+}
+
+#register {
+    position: absolute;
+    top: 45%; /* Position vertically in the center by default */
+    background-color: #B4F3FF;
+    border: 1px solid green;
+    z-index: 1;
+    left: 39%; /* Position horizontally in the center by default */
+    border-radius: 35px;
+    width: 20%; /* Default width */
+    font-weight: 500;
+    font-size: large;
+    height: 6%; /* Default height */
+    text-align: center; /* Center text inside the button */
+    line-height: 6%; /* Align text vertically */
+}
+
+#register:hover {
+    color: red;
+}
+
+/* Responsive Design */
+@media (max-width: 1080px) {
+    #slide1 {
+        height: 500px; /* Reduce height for smaller screens */
+    }
+
+    #register {
+        width: 25%; /* Increase width for better visibility */
+        height: 7%; /* Adjust height */
+        left: 37%; /* Center button horizontally */
+        top: 50%; /* Adjust position */
+        font-size: medium; /* Adjust font size */
+    }
+}
+
+@media (max-width: 720px) {
+    #slide1 {
+        height: 400px; /* Further reduce height for tablets */
+    }
+
+    #register {
+        width: 30%; /* Increase width for smaller screens */
+        height: 8%; /* Adjust height */
+        left: 35%; /* Adjust horizontal position */
+        top: 48%; /* Adjust vertical position */
+        font-size: small; /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    #slide1 {
+        height: 450px; /* Smaller height for mobile screens */
+    }
+
+    #register {
+        width: 40%; /* Make button wider for better tap area */
+        height: 10%; /* Increase height for readability */
+        left: 30%; /* Adjust horizontal position */
+        top: 46%; /* Adjust vertical position */
+        font-size: smaller; /* Further reduce font size */
+    }
+}
+
+@media (max-width: 360px) {
+    #slide1 {
+        height: 400px; /* Compact height for very small screens */
+    }
+
+    #register {
+        width: 50%; /* Full width for narrow screens */
+        height: 10%; /* Make button larger */
+        left: 25%; /* Center button horizontally */
+        top: 45%; /* Maintain centered position */
+        font-size: 14px; /* Use fixed font size for clarity */
+    }
+}
+
